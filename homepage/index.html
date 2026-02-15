@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreepadma's Portfolio - Windows 95</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon using a classic computer icon -->
+    <link rel="icon" href="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png">
+</head>
+<body>
+
+    <!-- Desktop Area -->
+    <div id="desktop">
+        <!-- Icons added via JS -->
+    </div>
+
+    <!-- Start Menu -->
+    <div id="start-menu">
+        <div class="sidebar">
+            <span class="sidebar-text">Windows 95</span>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item" onclick="openWindow('about'); toggleStartMenu()">
+                <img src="https://win98icons.alexmeub.com/icons/png/help_book_big-0.png" width="24">
+                About Me
+            </div>
+            <div class="menu-item" onclick="window.open('https://github.com/tnmurthy', '_blank'); toggleStartMenu()">
+                <img src="https://win98icons.alexmeub.com/icons/png/chm-2.png" width="24">
+                GitHub Profile
+            </div>
+            <div class="menu-item" onclick="alert('Shutting down...'); toggleStartMenu()">
+                <img src="https://win98icons.alexmeub.com/icons/png/shut_down_normal-2.png" width="24">
+                Shut Down...
+            </div>
+        </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div id="taskbar">
+        <button id="start-button" class="btn-win95" onclick="toggleStartMenu()">
+            <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" width="20">
+            Start
+        </button>
+        <div class="divider"></div>
+        <div id="taskbar-items">
+            <!-- Active windows go here -->
+        </div>
+        <div class="divider"></div>
+        <div id="clock">12:00 PM</div>
+    </div>
+
+    <!-- Templates for reusable windows -->
+    <template id="window-template">
+        <div class="window" style="top: 50px; left: 50px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="" class="window-icon" width="16" height="16">
+                    <span class="window-title">Title</span>
+                </div>
+                <div class="title-bar-controls">
+                    <button class="minimize-btn" aria-label="Minimize">_</button>
+                    <button class="maximize-btn" aria-label="Maximize">□</button>
+                    <button class="close-btn" aria-label="Close">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <!-- Content goes here -->
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
