@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,18 @@
     <!-- Favicon using a classic computer icon -->
     <link rel="icon" href="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png">
 </head>
+
 <body>
+    <!-- Boot Screen -->
+    <div id="boot-screen">
+        <div class="boot-logo">
+            <img src="https://win98icons.alexmeub.com/images/clouds.jpg" alt="Windows 95">
+            <div class="boot-text">Microsoft Windows 95</div>
+        </div>
+        <div class="boot-loader">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
     <!-- Desktop Area -->
     <div id="desktop">
@@ -21,6 +33,15 @@
             <span class="sidebar-text">Windows 95</span>
         </div>
         <div class="menu-items">
+            <div class="menu-item" onmouseenter="showPrograms()">
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png" width="24">
+                Programs <span>▶</span>
+            </div>
+            <div id="programs-submenu" class="submenu">
+                <div class="menu-item" onclick="openWindow('about')">Accessories</div>
+                <div class="menu-item" onclick="openWindow('pulse-pipeline')">Games</div>
+                <div class="menu-item" onclick="window.open('https://github.com/tnmurthy', '_blank')">Startup</div>
+            </div>
             <div class="menu-item" onclick="openWindow('about'); toggleStartMenu()">
                 <img src="https://win98icons.alexmeub.com/icons/png/help_book_big-0.png" width="24">
                 About Me
@@ -72,4 +93,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

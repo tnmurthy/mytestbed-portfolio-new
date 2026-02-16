@@ -1,16 +1,24 @@
-/* Icons as Data URIs to ensure they always load */
 const ICONS = {
-    computer: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMiA2aDI4djIwaC0yOFo2IiBmaWxsPSIjYzA2Ii8+PHBhdGggZD0iTTIgNmgxdjE5SDJWMsIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTMgMjVoMjZ2MUgzVjI1IiBmaWxsPSIjODA4MDgwIi8+PHBhdGggZD0iTTMgNmgyNnYxSDNWNiIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjUiIHk9IjkiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxNCIgZmlsbD0iIzAwODA4MCIvPjwvc3ZnPg==', // Simple placeholder
-    folder: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill%3D%22%23bfaa7f%22%20d%3D%22M2%204h8l2%202h18v22H2z%22%2F%3E%3Cpath%20fill%3D%22%23e6cd99%22%20d%3D%22M2%208h28v18H2z%22%2F%3E%3C%2Fsvg%3E',
-    text: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill%3D%22%23fff%22%20stroke%3D%22%23000%22%20d%3D%22M6%202h14l6%206v22H6z%22%2F%3E%3Cpath%20d%3D%22M20%202v6h6%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E',
-    clippy: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cpath%20d%3D%22M30%2090%20V40%20A10%2010%200%201%201%2050%2040%20V80%20A10%2010%200%201%200%2070%2080%20V30%22%20stroke%3D%22%23808080%22%20fill%3D%22none%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2230%22%20r%3D%223%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2265%22%20cy%3D%2230%22%20r%3D%223%22%20fill%3D%22black%22%2F%3E%3Cpath%20d%3D%22M30%2020%20Q40%2015%2050%2020%22%20stroke%3D%22black%22%20fill%3D%22none%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M50%2020%20Q60%2015%2070%2020%22%20stroke%3D%22black%22%20fill%3D%22none%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E'
+    computer: 'https://win98icons.alexmeub.com/icons/png/computer_explorer-3.png',
+    folder: 'https://win98icons.alexmeub.com/icons/png/directory_closed-4.png',
+    text: 'https://win98icons.alexmeub.com/icons/png/notepad-5.png',
+    clippy: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cpath%20d%3D%22M30%2090%20V40%20A10%2010%200%201%201%2050%2040%20V80%20A10%2010%200%201%200%2070%2080%20V30%22%20stroke%3D%22%23808080%22%20fill%3D%22none%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2230%22%20r%3D%223%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2265%22%20cy%3D%2230%22%20r%3D%223%22%20fill%3D%22black%22%2F%3E%3Cpath%20d%3D%22M30%2020%20Q40%2015%2050%2020%22%20stroke%3D%22black%22%20fill%3D%22none%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M50%2020%20Q60%2015%2070%2020%22%20stroke%3D%22black%22%20fill%3D%22none%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E',
+    video: 'https://win98icons.alexmeub.com/icons/png/mplayer-0.png',
+    gear: 'https://win98icons.alexmeub.com/icons/png/settings_gear-3.png',
+    msn: 'https://win98icons.alexmeub.com/icons/png/msn-2.png',
+    chart: 'https://win98icons.alexmeub.com/icons/png/performance-3.png',
+    html: 'https://win98icons.alexmeub.com/icons/png/html-1.png',
+    world: 'https://win98icons.alexmeub.com/icons/png/world-0.png',
+    network: 'https://win98icons.alexmeub.com/icons/png/world_network_directories-3.png',
+    camera: 'https://win98icons.alexmeub.com/icons/png/camera-0.png',
+    certificate: 'https://win98icons.alexmeub.com/icons/png/trust_certificate-0.png'
 };
 
 const projects = [
     {
         id: 'pulse-pipeline',
         title: 'Pulse-Pipeline',
-        icon: ICONS.folder,
+        icon: ICONS.video,
         url: 'https://pulse.mytestbed.tech',
         tooltip: 'Music Video Generator',
         content: `<h3>Pulse Pipeline</h3>
@@ -22,7 +30,7 @@ const projects = [
     {
         id: 'agentic-optimizer',
         title: 'Agentic Workflow',
-        icon: ICONS.folder,
+        icon: ICONS.gear,
         url: 'https://optimizer.mytestbed.tech',
         tooltip: 'JS Workflow Optimizer',
         content: `<h3>Agentic Workflow Optimizer</h3>
@@ -34,7 +42,7 @@ const projects = [
     {
         id: 'ai-agents',
         title: 'AI Agents',
-        icon: ICONS.folder,
+        icon: ICONS.msn,
         url: 'https://agents.mytestbed.tech',
         tooltip: 'AI Agent Collection',
         content: `<h3>AI Agents</h3>
@@ -46,7 +54,7 @@ const projects = [
     {
         id: 'api-dashboard',
         title: 'API Dashboard',
-        icon: ICONS.folder,
+        icon: ICONS.chart,
         url: 'https://api-dashboard.mytestbed.tech',
         tooltip: 'Intelligent Token Mgmt',
         content: `<h3>API Dashboard</h3>
@@ -58,7 +66,7 @@ const projects = [
     {
         id: 'makeover',
         title: 'Clever Makeover',
-        icon: ICONS.folder,
+        icon: ICONS.html,
         url: 'https://makeover.mytestbed.tech',
         tooltip: 'Portfolio Test Bed',
         content: `<h3>Clever Makeover</h3>
@@ -81,7 +89,7 @@ const projects = [
     {
         id: 'fxtrackpro',
         title: 'FxTrackPro',
-        icon: ICONS.text,
+        icon: ICONS.certificate,
         url: 'https://fxtrackpro.mytestbed.tech',
         tooltip: 'Trading Automation Tool',
         content: `<h3>FxTrackPro</h3>
@@ -92,7 +100,7 @@ const projects = [
     {
         id: 'llm-apps',
         title: 'LLM Apps Usage',
-        icon: ICONS.text,
+        icon: ICONS.world,
         url: 'https://llm-apps.mytestbed.tech',
         tooltip: 'RAG & AI Examples',
         content: `<h3>LLM Apps Usage</h3>
@@ -114,7 +122,7 @@ const projects = [
     {
         id: 'x-winds',
         title: 'X-Winds V2',
-        icon: ICONS.folder,
+        icon: ICONS.network,
         url: 'https://x-winds.mytestbed.tech',
         tooltip: 'TS Web Framework',
         content: `<h3>X-Winds V2</h3>
@@ -125,7 +133,7 @@ const projects = [
     {
         id: 'photonic',
         title: 'Photonic Curiosity',
-        icon: ICONS.text,
+        icon: ICONS.camera,
         url: 'https://photonic.mytestbed.tech',
         tooltip: 'HTML Creative Showcase',
         content: `<h3>Photonic Curiosity</h3>
@@ -139,12 +147,37 @@ let zIndex = 100;
 let openWindows = {};
 
 function init() {
+    handleBootSequence();
     renderDesktopIcons();
     updateClock();
     setInterval(updateClock, 1000);
 
     // Init Clippy
     initClippy();
+
+    // Init Phase 3
+    initContextMenu();
+    initMarqueeSelection();
+}
+
+function handleBootSequence() {
+    const bootScreen = document.getElementById('boot-screen');
+    const startupSound = new Audio('https://win98icons.alexmeub.com/sounds/startup.wav');
+
+    // Auto-boot after 3 seconds
+    setTimeout(() => {
+        bootScreen.classList.add('fade-out');
+        document.body.classList.add('booted');
+
+        // Play sound on first interaction (since browsers block autoplay)
+        const playSound = () => {
+            startupSound.play().catch(e => console.log('Audio wait for interaction'));
+            document.removeEventListener('click', playSound);
+            document.removeEventListener('mousedown', playSound);
+        };
+        document.addEventListener('click', playSound);
+        document.addEventListener('mousedown', playSound);
+    }, 3000);
 }
 
 function renderDesktopIcons() {
@@ -152,11 +185,31 @@ function renderDesktopIcons() {
     projects.forEach(project => {
         const icon = document.createElement('div');
         icon.className = 'desktop-icon';
-        icon.onclick = () => openWindow(project.id);
+
+        // Timer to distinguish between single click (nav) and double click (details)
+        let clickTimer = null;
+        icon.onclick = (e) => {
+            if (clickTimer) {
+                // Second click within timeout - it's a double click
+                clearTimeout(clickTimer);
+                clickTimer = null;
+                openWindow(project.id);
+            } else {
+                // First click
+                clickTimer = setTimeout(() => {
+                    clickTimer = null;
+                    // Only navigate if it stayed a single click
+                    window.open(project.url, '_blank');
+                }, 250);
+            }
+        };
+
+        const displayTitle = project.title.length > 15 ? project.title.substring(0, 12) + '...' : project.title;
+
         icon.innerHTML = `
             <img src="${project.icon}" alt="${project.title}">
-            <span>${project.title}</span>
-            <div class="tooltip">${project.tooltip || 'View Project'}</div>
+            <span>${displayTitle}</span>
+            <div class="tooltip">${project.tooltip || 'Visit Site'} (Double-click for details)</div>
         `;
         desktop.appendChild(icon);
     });
@@ -192,7 +245,12 @@ function openWindow(id) {
 
     // Attach events
     windowEl.querySelector('.close-btn').onclick = () => closeWindow(id, windowEl);
+    windowEl.querySelector('.minimize-btn').onclick = () => toggleMinimize(id, windowEl);
+    windowEl.querySelector('.maximize-btn').onclick = () => toggleMaximize(windowEl);
     windowEl.addEventListener('mousedown', () => bringToFront(windowEl));
+
+    // Set initial focus
+    bringToFront(windowEl);
 
     // Drag functionality
     makeDraggable(windowEl);
@@ -215,7 +273,36 @@ function closeWindow(id, element) {
 }
 
 function bringToFront(element) {
+    if (element.style.zIndex == zIndex && element.classList.contains('active')) return;
+
+    // Deactivate all windows
+    document.querySelectorAll('.window').forEach(win => {
+        win.classList.remove('active');
+        win.classList.add('inactive');
+    });
+
+    // Activate this one
+    element.classList.remove('inactive');
+    element.classList.add('active');
     element.style.zIndex = ++zIndex;
+
+    // Sync taskbar
+    const id = Object.keys(openWindows).find(key => openWindows[key] === element);
+    if (id) {
+        document.querySelectorAll('.taskbar-item').forEach(item => item.classList.remove('active'));
+        const taskItem = document.getElementById(`taskbar-${id}`);
+        if (taskItem) taskItem.classList.add('active');
+    }
+}
+
+function toggleMaximize(element) {
+    element.classList.toggle('maximized');
+}
+
+function toggleMinimize(id, element) {
+    element.style.display = 'none';
+    const taskItem = document.getElementById(`taskbar-${id}`);
+    if (taskItem) taskItem.classList.remove('active');
 }
 
 function toggleStartMenu() {
@@ -225,10 +312,22 @@ function toggleStartMenu() {
     if (menu.style.display === 'flex') {
         menu.style.display = 'none';
         btn.classList.remove('active');
+        // Close submenus
+        document.getElementById('programs-submenu').style.display = 'none';
     } else {
         menu.style.display = 'flex';
         btn.classList.add('active');
     }
+}
+
+function showPrograms() {
+    const submenu = document.getElementById('programs-submenu');
+    submenu.style.display = 'flex';
+}
+
+function hidePrograms() {
+    const submenu = document.getElementById('programs-submenu');
+    submenu.style.display = 'none';
 }
 
 // Close start menu when clicking elsewhere
@@ -324,9 +423,12 @@ class Clippy {
             "Did you know Windows 95 was released in... 1995? Amazing!",
             "Double-click an icon to open a project.",
             "I am watching you... browse this portfolio.",
-            "Don't provide to take a break and stretch!",
+            "Don't forget to take a break and stretch!",
             "Pulse Pipeline represents a dynamic agent pipeline.",
-            "API Dashboard helps manage your tokens."
+            "API Dashboard helps manage your tokens.",
+            "Try right-clicking (coming soon!)",
+            "You can drag windows around. Go ahead, try it!",
+            "The Start menu has some useful links too."
         ];
     }
 
@@ -350,8 +452,86 @@ class Clippy {
     }
 }
 
-function initClippy() {
-    window.clippy = new Clippy();
+function initContextMenu() {
+    const menu = document.createElement('div');
+    menu.id = 'context-menu';
+    menu.innerHTML = `
+        <div class="context-menu-item" onclick="location.reload()">Refresh</div>
+        <div class="context-menu-divider"></div>
+        <div class="context-menu-item" onclick="openWindow('about')">About This Site</div>
+        <div class="context-menu-item" onclick="alert('Windows 95 properties are coming soon!')">Properties</div>
+    `;
+    document.body.appendChild(menu);
+
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        menu.style.display = 'block';
+        menu.style.left = `${e.clientX}px`;
+        menu.style.top = `${e.clientY}px`;
+    });
+
+    document.addEventListener('click', () => {
+        menu.style.display = 'none';
+    });
+}
+
+function initMarqueeSelection() {
+    const desktop = document.getElementById('desktop');
+    const marquee = document.createElement('div');
+    marquee.id = 'selection-marquee';
+    desktop.appendChild(marquee);
+
+    let startX, startY, isDragging = false;
+
+    desktop.onmousedown = (e) => {
+        if (e.target !== desktop) return;
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        marquee.style.display = 'block';
+        marquee.style.width = '0';
+        marquee.style.height = '0';
+
+        // Clear previous selections
+        document.querySelectorAll('.desktop-icon').forEach(icon => icon.classList.remove('selected'));
+    };
+
+    document.onmousemove = (e) => {
+        if (!isDragging) return;
+        const currentX = e.clientX;
+        const currentY = e.clientY;
+
+        const left = Math.min(startX, currentX);
+        const top = Math.min(startY, currentY);
+        const width = Math.abs(currentX - startX);
+        const height = Math.abs(currentY - startY);
+
+        marquee.style.left = `${left}px`;
+        marquee.style.top = `${top}px`;
+        marquee.style.width = `${width}px`;
+        marquee.style.height = `${height}px`;
+
+        // Selection logic
+        const rect = marquee.getBoundingClientRect();
+        document.querySelectorAll('.desktop-icon').forEach(icon => {
+            const iconRect = icon.getBoundingClientRect();
+            if (
+                iconRect.left < rect.right &&
+                iconRect.right > rect.left &&
+                iconRect.top < rect.bottom &&
+                iconRect.bottom > rect.top
+            ) {
+                icon.classList.add('selected');
+            } else {
+                icon.classList.remove('selected');
+            }
+        });
+    };
+
+    document.onmouseup = () => {
+        isDragging = false;
+        marquee.style.display = 'none';
+    };
 }
 
 init();
