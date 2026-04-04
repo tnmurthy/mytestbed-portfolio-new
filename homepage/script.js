@@ -267,6 +267,7 @@ function openWindow(id) {
 }
 
 function closeWindow(id, element) {
+    if (element._destroyDrag) element._destroyDrag();
     element.remove();
     delete openWindows[id];
     removeFromTaskbar(id);
@@ -376,7 +377,8 @@ function makeDraggable(element) {
     let isDragging = false;
     let startX, startY, initialLeft, initialTop;
 
-    titleBar.onmousedown = (e) => {
+    const onMouseDown = (e) => {
+        if (e.target.closest('.title-bar-controls')) return;
         isDragging = true;
         startX = e.clientX;
         startY = e.clientY;
@@ -385,7 +387,7 @@ function makeDraggable(element) {
         bringToFront(element);
     };
 
-    document.onmousemove = (e) => {
+    const onMouseMove = (e) => {
         if (!isDragging) return;
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
@@ -393,9 +395,23 @@ function makeDraggable(element) {
         element.style.top = `${initialTop + dy}px`;
     };
 
-    document.onmouseup = () => {
+    const onMouseUp = () => {
         isDragging = false;
     };
+
+    titleBar.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+
+    element._destroyDrag = () => {
+        titleBar.removeEventListener('mousedown', onMouseDown);
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+    };
+}
+
+function initClippy() {
+    window.clippy = new Clippy();
 }
 
 /* Clippy Class */
@@ -496,7 +512,7 @@ function initMarqueeSelection() {
         document.querySelectorAll('.desktop-icon').forEach(icon => icon.classList.remove('selected'));
     };
 
-    document.onmousemove = (e) => {
+    document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         const currentX = e.clientX;
         const currentY = e.clientY;
@@ -526,12 +542,12 @@ function initMarqueeSelection() {
                 icon.classList.remove('selected');
             }
         });
-    };
+    });
 
-    document.onmouseup = () => {
+    document.addEventListener('mouseup', () => {
         isDragging = false;
         marquee.style.display = 'none';
-    };
+    });
 }
 
 init();
