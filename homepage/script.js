@@ -19,7 +19,13 @@ const ICONS = {
     linkedin: 'https://win98icons.alexmeub.com/icons/png/ie-2.png',
     resume: 'https://win98icons.alexmeub.com/icons/png/notepad-4.png',
     briefcase: 'https://win98icons.alexmeub.com/icons/png/briefcase-0.png',
-    book: 'https://win98icons.alexmeub.com/icons/png/help_book_big-0.png'
+    book: 'https://win98icons.alexmeub.com/icons/png/help_book_big-0.png',
+    database: 'https://win98icons.alexmeub.com/icons/png/database_network-0.png',
+    shield: 'https://win98icons.alexmeub.com/icons/png/shield-3.png',
+    search: 'https://win98icons.alexmeub.com/icons/png/search-0.png',
+    finance: 'https://win98icons.alexmeub.com/icons/png/performance-3.png',
+    terminal: 'https://win98icons.alexmeub.com/icons/png/dos-1.png',
+    pipe: 'https://win98icons.alexmeub.com/icons/png/recycle_bin_full-4.png'
 };
 
 const projects = [
@@ -380,6 +386,158 @@ const projects = [
         <p><strong>📁 AI-First Product Strategy</strong><br>
         Led product strategy for a B2B SaaS platform integrating conversational AI — from 0-to-1 MVP through to product-market fit.</p>
         <button class="btn-win95" onclick="window.open('https://www.linkedin.com/in/narayanamurthy-t/', '_blank')">Connect for Details</button>`
+    },
+
+    // ── Data Governance ───────────────────────────────────────────────────────
+    {
+        id: 'ai-data-catalog',
+        title: 'AI Data Catalog',
+        icon: ICONS.database,
+        url: 'https://github.com/tnmurthy/ai-data-catalog',
+        tooltip: 'AI-Powered Data Catalog',
+        content: `<h3>AI Data Catalog</h3>
+        <p>AI-powered data catalog with auto-generated metadata, natural-language dataset search, and lineage tracking. Integrates with S3, Postgres, and REST APIs to govern AI/data assets at scale.</p>
+        <p><strong>Role:</strong> Strategic Advisor · Data Governance</p>
+        <p><strong>Stack:</strong> Python, OpenAI, FastAPI</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/ai-data-catalog', '_blank')">View Code</button>`
+    },
+    {
+        id: 'data-lineage-tracker',
+        title: 'Data Lineage Tracker',
+        icon: ICONS.network,
+        url: 'https://github.com/tnmurthy/data-lineage-tracker',
+        tooltip: 'Visual Data Lineage & Compliance',
+        content: `<h3>Data Lineage Tracker</h3>
+        <p>Visual data lineage tool mapping data flow from source systems through transformations to downstream consumers. Supports regulatory compliance (BCBS 239, GDPR). Integrates with dbt and Apache Atlas.</p>
+        <p><strong>Role:</strong> Strategic Advisor · Data Governance</p>
+        <p><strong>Stack:</strong> Python, TypeScript, dbt</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/data-lineage-tracker', '_blank')">View Code</button>`
+    },
+    {
+        id: 'data-quality-agent',
+        title: 'Data Quality Agent',
+        icon: ICONS.shield,
+        url: 'https://github.com/tnmurthy/data-quality-agent',
+        tooltip: 'Agentic Data Quality Monitor',
+        content: `<h3>Data Quality Agent</h3>
+        <p>Agentic data quality monitor that continuously profiles datasets, detects schema drift and anomalies, and auto-generates remediation tickets — combining agentic architecture with enterprise data governance.</p>
+        <p><strong>Role:</strong> Agentic Architect · Data Governance</p>
+        <p><strong>Stack:</strong> Python, LangGraph, Great Expectations</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/data-quality-agent', '_blank')">View Code</button>`
+    },
+
+    // ── Data Analytics ────────────────────────────────────────────────────────
+    {
+        id: 'genai-analytics-assistant',
+        title: 'GenAI Analytics Asst.',
+        icon: ICONS.search,
+        url: 'https://github.com/tnmurthy/genai-analytics-assistant',
+        tooltip: 'Natural Language to SQL',
+        content: `<h3>GenAI Analytics Assistant</h3>
+        <p>Natural-language-to-SQL analytics assistant: business users ask questions in plain English, the agent generates and executes SQL, and returns visualised results — no SQL knowledge required.</p>
+        <p><strong>Role:</strong> GenAI Architect · Data Analytics</p>
+        <p><strong>Stack:</strong> Python, OpenAI, Pandas, Plotly</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/genai-analytics-assistant', '_blank')">View Code</button>`
+    },
+    {
+        id: 'real-time-market-analytics',
+        title: 'Market Analytics',
+        icon: ICONS.chart,
+        url: 'https://github.com/tnmurthy/real-time-market-analytics',
+        tooltip: 'Real-Time Market Data Dashboard',
+        content: `<h3>Real-Time Market Analytics</h3>
+        <p>Real-time streaming analytics dashboard for market data: tick data, OHLCV, and order book depth. Built on WebSockets and a time-series DB. Natural companion to FxTrackPro.</p>
+        <p><strong>Role:</strong> Data Analytics · Product Owner</p>
+        <p><strong>Stack:</strong> TypeScript, TimescaleDB, WebSockets</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/real-time-market-analytics', '_blank')">View Code</button>`
+    },
+    {
+        id: 'executive-insights-ai',
+        title: 'Executive Insights AI',
+        icon: ICONS.strategy,
+        url: 'https://github.com/tnmurthy/executive-insights-ai',
+        tooltip: 'AI Board-Level Reporting',
+        content: `<h3>Executive Insights AI</h3>
+        <p>AI-powered executive reporting tool that ingests raw sprint and business metrics and generates narrative board-level summaries, risk flags, and recommended actions using LLMs.</p>
+        <p><strong>Role:</strong> Product Owner · Strategic Advisor</p>
+        <p><strong>Stack:</strong> Python, OpenAI, Markdown</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/executive-insights-ai', '_blank')">View Code</button>`
+    },
+
+    // ── LCR / Regulatory ──────────────────────────────────────────────────────
+    {
+        id: 'lcr-calculator',
+        title: 'LCR Calculator',
+        icon: ICONS.finance,
+        url: 'https://github.com/tnmurthy/lcr-calculator',
+        tooltip: 'Basel III LCR Compliance Engine',
+        content: `<h3>LCR Calculator</h3>
+        <p>Basel III Liquidity Coverage Ratio (LCR) compliance engine: calculates HQLA vs net cash outflows over a 30-day stress horizon. Supports Level 1, 2A, and 2B asset classification with configurable haircuts and run-off rates.</p>
+        <p><strong>Role:</strong> Product Owner · Strategic Advisor (FinTech / Banking)</p>
+        <p><strong>Stack:</strong> Python, Pandas</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/lcr-calculator', '_blank')">View Code</button>`
+    },
+    {
+        id: 'lcr-stress-scenario-modeller',
+        title: 'LCR Stress Modeller',
+        icon: ICONS.brain,
+        url: 'https://github.com/tnmurthy/lcr-stress-scenario-modeller',
+        tooltip: 'AI-Assisted LCR Stress Testing',
+        content: `<h3>LCR Stress Scenario Modeller</h3>
+        <p>AI-assisted stress testing tool that generates and evaluates multiple market stress scenarios against a firm's LCR position, producing regulatory-ready reports. Merges GenAI capabilities with Basel III compliance.</p>
+        <p><strong>Role:</strong> GenAI Architect · Product Owner (FinTech)</p>
+        <p><strong>Stack:</strong> Python, OpenAI, Pandas</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/lcr-stress-scenario-modeller', '_blank')">View Code</button>`
+    },
+    {
+        id: 'liquidity-risk-agent',
+        title: 'Liquidity Risk Agent',
+        icon: ICONS.robot,
+        url: 'https://github.com/tnmurthy/liquidity-risk-agent',
+        tooltip: 'Intraday Liquidity Monitoring Agent',
+        content: `<h3>Liquidity Risk Agent</h3>
+        <p>Agentic workflow for intraday liquidity monitoring: watches live positions, alerts on LCR threshold breaches, and proposes remediation actions including collateral optimisation and repo trade suggestions.</p>
+        <p><strong>Role:</strong> Agentic Architect · Strategic Advisor (FinTech)</p>
+        <p><strong>Stack:</strong> Python, LangGraph, CrewAI</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/liquidity-risk-agent', '_blank')">View Code</button>`
+    },
+
+    // ── Bloomberg Terminal ────────────────────────────────────────────────────
+    {
+        id: 'bloomberg-data-agent',
+        title: 'Bloomberg Data Agent',
+        icon: ICONS.terminal,
+        url: 'https://github.com/tnmurthy/bloomberg-data-agent',
+        tooltip: 'Agentic Bloomberg API Wrapper',
+        content: `<h3>Bloomberg Data Agent</h3>
+        <p>Agentic wrapper around Bloomberg Open API (BLPAPI): natural-language queries retrieve and interpret market data, run historical backtests, and generate trade ideas using LLM tool-calling patterns.</p>
+        <p><strong>Role:</strong> Agentic Architect · GenAI Architect (FinTech)</p>
+        <p><strong>Stack:</strong> Python, BLPAPI, LangChain</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/bloomberg-data-agent', '_blank')">View Code</button>`
+    },
+    {
+        id: 'bloomberg-genai-copilot',
+        title: 'Bloomberg GenAI Copilot',
+        icon: ICONS.msn,
+        url: 'https://github.com/tnmurthy/bloomberg-genai-copilot',
+        tooltip: 'GenAI Overlay for Bloomberg',
+        content: `<h3>Bloomberg GenAI Copilot</h3>
+        <p>GenAI co-pilot overlay for Bloomberg Terminal workflows: summarises news feeds, explains complex instruments in plain English, and compares asset performance — making Bloomberg data accessible to non-quant stakeholders.</p>
+        <p><strong>Role:</strong> GenAI Architect · Strategic Advisor</p>
+        <p><strong>Stack:</strong> Python, OpenAI, TypeScript</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/bloomberg-genai-copilot', '_blank')">View Code</button>`
+    },
+    {
+        id: 'market-data-pipeline',
+        title: 'Market Data Pipeline',
+        icon: ICONS.pipe,
+        url: 'https://github.com/tnmurthy/market-data-pipeline',
+        tooltip: 'Bloomberg to Data Warehouse Pipeline',
+        content: `<h3>Market Data Pipeline</h3>
+        <p>Production-grade data ingestion pipeline from Bloomberg Terminal to a cloud data warehouse (Snowflake / BigQuery), with automated data quality checks, lineage tracking, and scheduled analytics refreshes.</p>
+        <p><strong>Role:</strong> Data Governance · GenAI Architect</p>
+        <p><strong>Stack:</strong> Python, dbt, Snowflake, Airflow</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/market-data-pipeline', '_blank')">View Code</button>`
     }
 ];
 
@@ -682,7 +840,17 @@ class Clippy {
             "API Dashboard helps manage your tokens.",
             "Try right-clicking (coming soon!)",
             "You can drag windows around. Go ahead, try it!",
-            "The Start menu has some useful links too."
+            "The Start menu has some useful links too.",
+            "Check out the LCR Calculator — Basel III compliance in Python!",
+            "The Bloomberg Data Agent uses LLM tool-calling to query market data.",
+            "Data Quality Agent continuously monitors your datasets for drift and anomalies.",
+            "GenAI Analytics Assistant turns plain English into SQL queries.",
+            "The AI Data Catalog auto-generates metadata and tracks data lineage.",
+            "Liquidity Risk Agent watches intraday positions and alerts on LCR breaches.",
+            "Market Data Pipeline moves Bloomberg data into Snowflake with full lineage.",
+            "Bloomberg GenAI Copilot explains complex instruments in plain English.",
+            "Executive Insights AI writes board-level summaries from raw sprint metrics.",
+            "Real-Time Market Analytics streams tick data and OHLCV charts live."
         ];
     }
 
