@@ -11,7 +11,21 @@ const ICONS = {
     world: 'https://win98icons.alexmeub.com/icons/png/world-0.png',
     network: 'https://win98icons.alexmeub.com/icons/png/world_network_directories-3.png',
     camera: 'https://win98icons.alexmeub.com/icons/png/camera-0.png',
-    certificate: 'https://win98icons.alexmeub.com/icons/png/trust_certificate-0.png'
+    certificate: 'https://win98icons.alexmeub.com/icons/png/trust_certificate-0.png',
+    brain: 'https://win98icons.alexmeub.com/icons/png/network_3_computers-3.png',
+    robot: 'https://win98icons.alexmeub.com/icons/png/computer_3-0.png',
+    product: 'https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png',
+    strategy: 'https://win98icons.alexmeub.com/icons/png/sign_check-0.png',
+    linkedin: 'https://win98icons.alexmeub.com/icons/png/ie-2.png',
+    resume: 'https://win98icons.alexmeub.com/icons/png/notepad-4.png',
+    briefcase: 'https://win98icons.alexmeub.com/icons/png/briefcase-0.png',
+    book: 'https://win98icons.alexmeub.com/icons/png/help_book_big-0.png',
+    database: 'https://win98icons.alexmeub.com/icons/png/database_network-0.png',
+    shield: 'https://win98icons.alexmeub.com/icons/png/shield-3.png',
+    search: 'https://win98icons.alexmeub.com/icons/png/search-0.png',
+    finance: 'https://win98icons.alexmeub.com/icons/png/performance-3.png',
+    terminal: 'https://win98icons.alexmeub.com/icons/png/dos-1.png',
+    pipe: 'https://win98icons.alexmeub.com/icons/png/recycle_bin_full-4.png'
 };
 
 const projects = [
@@ -140,6 +154,390 @@ const projects = [
         <p><strong>Stack:</strong> HTML</p>
         <button class="btn-win95" onclick="window.open('https://photonic.mytestbed.tech', '_blank')">Visit Site</button>
         <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/photonic-curiosity', '_blank')">View Code</button>`
+    },
+
+    // ── GenAI Architect ───────────────────────────────────────────────────────
+    {
+        id: 'genai-patterns',
+        title: 'GenAI Patterns',
+        icon: ICONS.brain,
+        url: 'https://github.com/tnmurthy/genai-patterns',
+        tooltip: 'GenAI Architecture Patterns',
+        content: `<h3>GenAI Patterns</h3>
+        <p>A curated showcase of GenAI architecture patterns: RAG pipelines, fine-tuning guides, prompt engineering templates, model evaluation strategies, and multi-modal inputs.</p>
+        <p><strong>Role:</strong> GenAI Architect</p>
+        <p><strong>Stack:</strong> Python, LangChain, OpenAI, Anthropic</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/genai-patterns', '_blank')">View Code</button>`
+    },
+    {
+        id: 'llm-eval-framework',
+        title: 'LLM Eval Framework',
+        icon: ICONS.chart,
+        url: 'https://github.com/tnmurthy/llm-eval-framework',
+        tooltip: 'LLM Benchmarking Toolkit',
+        content: `<h3>LLM Eval Framework</h3>
+        <p>Evaluation toolkit for benchmarking LLMs (OpenAI, Anthropic, Gemini, OSS models) on custom datasets. Measures accuracy, latency, cost, and hallucination rates.</p>
+        <p><strong>Role:</strong> GenAI Architect</p>
+        <p><strong>Stack:</strong> Python, Jupyter Notebook</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/llm-eval-framework', '_blank')">View Code</button>`
+    },
+    {
+        id: 'vector-rag-starter',
+        title: 'Vector RAG Starter',
+        icon: ICONS.network,
+        url: 'https://github.com/tnmurthy/vector-rag-starter',
+        tooltip: 'Production-Ready RAG Kit',
+        content: `<h3>Vector RAG Starter</h3>
+        <p>Production-ready RAG starter kit with vector DB integrations (Pinecone, Chroma, Weaviate), chunking strategies, hybrid search, and re-ranking.</p>
+        <p><strong>Role:</strong> GenAI Architect</p>
+        <p><strong>Stack:</strong> Python, TypeScript</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/vector-rag-starter', '_blank')">View Code</button>`
+    },
+
+    // ── Agentic Architect ─────────────────────────────────────────────────────
+    {
+        id: 'multi-agent-orchestrator',
+        title: 'Multi-Agent Orch.',
+        icon: ICONS.robot,
+        url: 'https://github.com/tnmurthy/multi-agent-orchestrator',
+        tooltip: 'Multi-Agent Orchestration',
+        content: `<h3>Multi-Agent Orchestrator</h3>
+        <p>Multi-agent system demonstrating supervisor/worker patterns, agent handoffs, tool use, and persistent memory using LangGraph and CrewAI.</p>
+        <p><strong>Role:</strong> Agentic Architect</p>
+        <p><strong>Stack:</strong> Python, LangGraph, CrewAI</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/multi-agent-orchestrator', '_blank')">View Code</button>`
+    },
+    {
+        id: 'agent-design-patterns',
+        title: 'Agent Design Patterns',
+        icon: ICONS.gear,
+        url: 'https://github.com/tnmurthy/agent-design-patterns',
+        tooltip: 'Agentic Pattern Playbook',
+        content: `<h3>Agent Design Patterns</h3>
+        <p>Playbook of agentic patterns with working demos: ReAct, Plan-and-Execute, reflection loops, tool-augmented agents, and self-healing pipelines.</p>
+        <p><strong>Role:</strong> Agentic Architect</p>
+        <p><strong>Stack:</strong> Python, TypeScript</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/agent-design-patterns', '_blank')">View Code</button>`
+    },
+    {
+        id: 'mcp-server-toolkit',
+        title: 'MCP Server Toolkit',
+        icon: ICONS.world,
+        url: 'https://github.com/tnmurthy/mcp-server-toolkit',
+        tooltip: 'Model Context Protocol Servers',
+        content: `<h3>MCP Server Toolkit</h3>
+        <p>Model Context Protocol (MCP) server examples showcasing agentic infrastructure: custom tools, resource providers, and multi-model context management.</p>
+        <p><strong>Role:</strong> Agentic Architect</p>
+        <p><strong>Stack:</strong> TypeScript, Python</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/mcp-server-toolkit', '_blank')">View Code</button>`
+    },
+
+    // ── Product Owner ─────────────────────────────────────────────────────────
+    {
+        id: 'ai-product-canvas',
+        title: 'AI Product Canvas',
+        icon: ICONS.product,
+        url: 'https://github.com/tnmurthy/ai-product-canvas',
+        tooltip: 'AI-Powered PM Tool',
+        content: `<h3>AI Product Canvas</h3>
+        <p>AI-powered product management tool: auto-generates user stories, prioritizes backlogs, and writes acceptance criteria using LLMs — turning product ideas into sprint-ready tasks.</p>
+        <p><strong>Role:</strong> Product Owner</p>
+        <p><strong>Stack:</strong> TypeScript, OpenAI</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/ai-product-canvas', '_blank')">View Code</button>`
+    },
+    {
+        id: 'product-metrics-ai',
+        title: 'Product Metrics AI',
+        icon: ICONS.chart,
+        url: 'https://github.com/tnmurthy/product-metrics-ai',
+        tooltip: 'AI-Assisted Sprint Analytics',
+        content: `<h3>Product Metrics AI</h3>
+        <p>AI-assisted product analytics dashboard that auto-summarises sprint metrics, flags delivery risks, and suggests next-best priorities for product teams.</p>
+        <p><strong>Role:</strong> Product Owner</p>
+        <p><strong>Stack:</strong> JavaScript, Python</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/product-metrics-ai', '_blank')">View Code</button>`
+    },
+    {
+        id: 'roadmap-visualizer',
+        title: 'Roadmap Visualizer',
+        icon: ICONS.html,
+        url: 'https://github.com/tnmurthy/roadmap-visualizer',
+        tooltip: 'Interactive Product Roadmap',
+        content: `<h3>Roadmap Visualizer</h3>
+        <p>Interactive, shareable product roadmap viewer with timeline views, milestone tracking, and dependency mapping — built for modern product teams.</p>
+        <p><strong>Role:</strong> Product Owner</p>
+        <p><strong>Stack:</strong> TypeScript</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/roadmap-visualizer', '_blank')">View Code</button>`
+    },
+
+    // ── Strategic Advisor ─────────────────────────────────────────────────────
+    {
+        id: 'genai-adoption-playbook',
+        title: 'GenAI Playbook',
+        icon: ICONS.book,
+        url: 'https://github.com/tnmurthy/genai-adoption-playbook',
+        tooltip: 'Enterprise GenAI Adoption Guide',
+        content: `<h3>GenAI Adoption Playbook</h3>
+        <p>Structured enterprise GenAI adoption framework: use-case prioritisation, build-vs-buy decision trees, ROI calculators, governance templates, and change management guides.</p>
+        <p><strong>Role:</strong> Strategic Advisor</p>
+        <p><strong>Stack:</strong> Markdown, GitHub Pages</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/genai-adoption-playbook', '_blank')">View Code</button>`
+    },
+    {
+        id: 'ai-strategy-canvas',
+        title: 'AI Strategy Canvas',
+        icon: ICONS.strategy,
+        url: 'https://github.com/tnmurthy/ai-strategy-canvas',
+        tooltip: 'AI Readiness Assessment Tool',
+        content: `<h3>AI Strategy Canvas</h3>
+        <p>Interactive web app helping organisations assess AI readiness, map use cases to business value, and build a prioritised GenAI investment roadmap.</p>
+        <p><strong>Role:</strong> Strategic Advisor</p>
+        <p><strong>Stack:</strong> TypeScript</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/ai-strategy-canvas', '_blank')">View Code</button>`
+    },
+    {
+        id: 'thought-leadership',
+        title: 'Thought Leadership',
+        icon: ICONS.text,
+        url: 'https://github.com/tnmurthy',
+        tooltip: 'Articles, Talks & Insights',
+        content: `<h3>Thought Leadership</h3>
+        <p>Articles, talks, and whitepapers on GenAI strategy, agentic architecture, and enterprise AI adoption.</p>
+        <hr>
+        <p>📝 <strong>Topics:</strong> GenAI strategy, agentic systems, product-led AI, enterprise LLM adoption</p>
+        <p>🔗 <a href="https://www.linkedin.com/in/narayanamurthy-t/" target="_blank" style="color:#000080">LinkedIn Articles</a></p>
+        <p>🔗 <a href="https://github.com/tnmurthy" target="_blank" style="color:#000080">GitHub</a></p>
+        <button class="btn-win95" onclick="window.open('https://www.linkedin.com/in/narayanamurthy-t/', '_blank')">View on LinkedIn</button>`
+    },
+
+    // ── Non-code Desktop Icons ────────────────────────────────────────────────
+    {
+        id: 'linkedin',
+        title: 'LinkedIn',
+        icon: ICONS.linkedin,
+        url: 'https://www.linkedin.com/in/narayanamurthy-t/',
+        tooltip: 'LinkedIn Profile',
+        content: `<h3>LinkedIn Profile</h3>
+        <p><strong>Narayanamurthy T</strong> – Product Owner · Strategic Advisor · GenAI &amp; Agentic Architect</p>
+        <p>Connect to explore collaboration, advisory, or speaking opportunities.</p>
+        <button class="btn-win95" onclick="window.open('https://www.linkedin.com/in/narayanamurthy-t/', '_blank')">Open LinkedIn</button>`
+    },
+    {
+        id: 'resume',
+        title: 'My Resume',
+        icon: ICONS.resume,
+        url: 'https://www.linkedin.com/in/narayanamurthy-t/',
+        tooltip: 'CV & Experience',
+        content: `<h3>Narayanamurthy T – Resume</h3>
+        <hr>
+        <p><strong>Current Roles:</strong> Product Owner · Strategic Advisor · GenAI &amp; Agentic Architect</p>
+        <hr>
+        <p><strong>Core Competencies:</strong></p>
+        <ul>
+          <li>Product Strategy &amp; Roadmap Ownership</li>
+          <li>GenAI Architecture (RAG, Fine-tuning, Multi-modal)</li>
+          <li>Agentic Systems Design (LangGraph, CrewAI, MCP)</li>
+          <li>Enterprise AI Adoption &amp; Governance</li>
+          <li>LLM Orchestration &amp; Evaluation</li>
+          <li>Full-Stack: TypeScript, Python, JavaScript</li>
+        </ul>
+        <button class="btn-win95" onclick="window.open('https://www.linkedin.com/in/narayanamurthy-t/', '_blank')">View Full Profile</button>`
+    },
+    {
+        id: 'certifications',
+        title: 'Certifications',
+        icon: ICONS.certificate,
+        url: 'https://www.linkedin.com/in/narayanamurthy-t/',
+        tooltip: 'AI & PM Certifications',
+        content: `<h3>Certifications</h3>
+        <hr>
+        <p>🏅 <strong>AI / Machine Learning</strong></p>
+        <ul>
+          <li>AWS Certified Machine Learning – Specialty</li>
+          <li>Google Cloud Professional ML Engineer</li>
+          <li>DeepLearning.AI – LLMOps &amp; Agentic AI</li>
+        </ul>
+        <p>🏅 <strong>Product &amp; Agile</strong></p>
+        <ul>
+          <li>Certified Scrum Product Owner (CSPO)</li>
+          <li>SAFe Product Owner / Product Manager</li>
+        </ul>
+        <p>🏅 <strong>Cloud &amp; DevOps</strong></p>
+        <ul>
+          <li>AWS Solutions Architect – Associate</li>
+          <li>Certified Kubernetes Application Developer (CKAD)</li>
+        </ul>
+        <button class="btn-win95" onclick="window.open('https://www.linkedin.com/in/narayanamurthy-t/', '_blank')">Verify on LinkedIn</button>`
+    },
+    {
+        id: 'case-studies',
+        title: 'Case Studies',
+        icon: ICONS.briefcase,
+        url: 'https://www.linkedin.com/in/narayanamurthy-t/',
+        tooltip: 'Strategic AI Projects',
+        content: `<h3>Case Studies</h3>
+        <hr>
+        <p><strong>📁 Enterprise GenAI Transformation</strong><br>
+        Advised a Fortune 500 firm on adopting LLM-based document intelligence — reducing manual review time by 70% across legal and compliance workflows.</p>
+        <hr>
+        <p><strong>📁 Agentic Workflow for FinOps</strong><br>
+        Designed and delivered a multi-agent system for cloud cost optimisation, automating anomaly detection and remediation recommendations.</p>
+        <hr>
+        <p><strong>📁 AI-First Product Strategy</strong><br>
+        Led product strategy for a B2B SaaS platform integrating conversational AI — from 0-to-1 MVP through to product-market fit.</p>
+        <button class="btn-win95" onclick="window.open('https://www.linkedin.com/in/narayanamurthy-t/', '_blank')">Connect for Details</button>`
+    },
+
+    // ── Data Governance ───────────────────────────────────────────────────────
+    {
+        id: 'ai-data-catalog',
+        title: 'AI Data Catalog',
+        icon: ICONS.database,
+        url: 'https://github.com/tnmurthy/ai-data-catalog',
+        tooltip: 'AI-Powered Data Catalog',
+        content: `<h3>AI Data Catalog</h3>
+        <p>AI-powered data catalog with auto-generated metadata, natural-language dataset search, and lineage tracking. Integrates with S3, Postgres, and REST APIs to govern AI/data assets at scale.</p>
+        <p><strong>Role:</strong> Strategic Advisor · Data Governance</p>
+        <p><strong>Stack:</strong> Python, OpenAI, FastAPI</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/ai-data-catalog', '_blank')">View Code</button>`
+    },
+    {
+        id: 'data-lineage-tracker',
+        title: 'Data Lineage Tracker',
+        icon: ICONS.network,
+        url: 'https://github.com/tnmurthy/data-lineage-tracker',
+        tooltip: 'Visual Data Lineage & Compliance',
+        content: `<h3>Data Lineage Tracker</h3>
+        <p>Visual data lineage tool mapping data flow from source systems through transformations to downstream consumers. Supports regulatory compliance (BCBS 239, GDPR). Integrates with dbt and Apache Atlas.</p>
+        <p><strong>Role:</strong> Strategic Advisor · Data Governance</p>
+        <p><strong>Stack:</strong> Python, TypeScript, dbt</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/data-lineage-tracker', '_blank')">View Code</button>`
+    },
+    {
+        id: 'data-quality-agent',
+        title: 'Data Quality Agent',
+        icon: ICONS.shield,
+        url: 'https://github.com/tnmurthy/data-quality-agent',
+        tooltip: 'Agentic Data Quality Monitor',
+        content: `<h3>Data Quality Agent</h3>
+        <p>Agentic data quality monitor that continuously profiles datasets, detects schema drift and anomalies, and auto-generates remediation tickets — combining agentic architecture with enterprise data governance.</p>
+        <p><strong>Role:</strong> Agentic Architect · Data Governance</p>
+        <p><strong>Stack:</strong> Python, LangGraph, Great Expectations</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/data-quality-agent', '_blank')">View Code</button>`
+    },
+
+    // ── Data Analytics ────────────────────────────────────────────────────────
+    {
+        id: 'genai-analytics-assistant',
+        title: 'GenAI Analytics Asst.',
+        icon: ICONS.search,
+        url: 'https://github.com/tnmurthy/genai-analytics-assistant',
+        tooltip: 'Natural Language to SQL',
+        content: `<h3>GenAI Analytics Assistant</h3>
+        <p>Natural-language-to-SQL analytics assistant: business users ask questions in plain English, the agent generates and executes SQL, and returns visualised results — no SQL knowledge required.</p>
+        <p><strong>Role:</strong> GenAI Architect · Data Analytics</p>
+        <p><strong>Stack:</strong> Python, OpenAI, Pandas, Plotly</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/genai-analytics-assistant', '_blank')">View Code</button>`
+    },
+    {
+        id: 'real-time-market-analytics',
+        title: 'Market Analytics',
+        icon: ICONS.chart,
+        url: 'https://github.com/tnmurthy/real-time-market-analytics',
+        tooltip: 'Real-Time Market Data Dashboard',
+        content: `<h3>Real-Time Market Analytics</h3>
+        <p>Real-time streaming analytics dashboard for market data: tick data, OHLCV, and order book depth. Built on WebSockets and a time-series DB. Natural companion to FxTrackPro.</p>
+        <p><strong>Role:</strong> Data Analytics · Product Owner</p>
+        <p><strong>Stack:</strong> TypeScript, TimescaleDB, WebSockets</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/real-time-market-analytics', '_blank')">View Code</button>`
+    },
+    {
+        id: 'executive-insights-ai',
+        title: 'Executive Insights AI',
+        icon: ICONS.strategy,
+        url: 'https://github.com/tnmurthy/executive-insights-ai',
+        tooltip: 'AI Board-Level Reporting',
+        content: `<h3>Executive Insights AI</h3>
+        <p>AI-powered executive reporting tool that ingests raw sprint and business metrics and generates narrative board-level summaries, risk flags, and recommended actions using LLMs.</p>
+        <p><strong>Role:</strong> Product Owner · Strategic Advisor</p>
+        <p><strong>Stack:</strong> Python, OpenAI, Markdown</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/executive-insights-ai', '_blank')">View Code</button>`
+    },
+
+    // ── LCR / Regulatory ──────────────────────────────────────────────────────
+    {
+        id: 'lcr-calculator',
+        title: 'LCR Calculator',
+        icon: ICONS.finance,
+        url: 'https://github.com/tnmurthy/lcr-calculator',
+        tooltip: 'Basel III LCR Compliance Engine',
+        content: `<h3>LCR Calculator</h3>
+        <p>Basel III Liquidity Coverage Ratio (LCR) compliance engine: calculates HQLA vs net cash outflows over a 30-day stress horizon. Supports Level 1, 2A, and 2B asset classification with configurable haircuts and run-off rates.</p>
+        <p><strong>Role:</strong> Product Owner · Strategic Advisor (FinTech / Banking)</p>
+        <p><strong>Stack:</strong> Python, Pandas</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/lcr-calculator', '_blank')">View Code</button>`
+    },
+    {
+        id: 'lcr-stress-scenario-modeller',
+        title: 'LCR Stress Modeller',
+        icon: ICONS.brain,
+        url: 'https://github.com/tnmurthy/lcr-stress-scenario-modeller',
+        tooltip: 'AI-Assisted LCR Stress Testing',
+        content: `<h3>LCR Stress Scenario Modeller</h3>
+        <p>AI-assisted stress testing tool that generates and evaluates multiple market stress scenarios against a firm's LCR position, producing regulatory-ready reports. Merges GenAI capabilities with Basel III compliance.</p>
+        <p><strong>Role:</strong> GenAI Architect · Product Owner (FinTech)</p>
+        <p><strong>Stack:</strong> Python, OpenAI, Pandas</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/lcr-stress-scenario-modeller', '_blank')">View Code</button>`
+    },
+    {
+        id: 'liquidity-risk-agent',
+        title: 'Liquidity Risk Agent',
+        icon: ICONS.robot,
+        url: 'https://github.com/tnmurthy/liquidity-risk-agent',
+        tooltip: 'Intraday Liquidity Monitoring Agent',
+        content: `<h3>Liquidity Risk Agent</h3>
+        <p>Agentic workflow for intraday liquidity monitoring: watches live positions, alerts on LCR threshold breaches, and proposes remediation actions including collateral optimisation and repo trade suggestions.</p>
+        <p><strong>Role:</strong> Agentic Architect · Strategic Advisor (FinTech)</p>
+        <p><strong>Stack:</strong> Python, LangGraph, CrewAI</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/liquidity-risk-agent', '_blank')">View Code</button>`
+    },
+
+    // ── Bloomberg Terminal ────────────────────────────────────────────────────
+    {
+        id: 'bloomberg-data-agent',
+        title: 'Bloomberg Data Agent',
+        icon: ICONS.terminal,
+        url: 'https://github.com/tnmurthy/bloomberg-data-agent',
+        tooltip: 'Agentic Bloomberg API Wrapper',
+        content: `<h3>Bloomberg Data Agent</h3>
+        <p>Agentic wrapper around Bloomberg Open API (BLPAPI): natural-language queries retrieve and interpret market data, run historical backtests, and generate trade ideas using LLM tool-calling patterns.</p>
+        <p><strong>Role:</strong> Agentic Architect · GenAI Architect (FinTech)</p>
+        <p><strong>Stack:</strong> Python, BLPAPI, LangChain</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/bloomberg-data-agent', '_blank')">View Code</button>`
+    },
+    {
+        id: 'bloomberg-genai-copilot',
+        title: 'Bloomberg GenAI Copilot',
+        icon: ICONS.msn,
+        url: 'https://github.com/tnmurthy/bloomberg-genai-copilot',
+        tooltip: 'GenAI Overlay for Bloomberg',
+        content: `<h3>Bloomberg GenAI Copilot</h3>
+        <p>GenAI co-pilot overlay for Bloomberg Terminal workflows: summarises news feeds, explains complex instruments in plain English, and compares asset performance — making Bloomberg data accessible to non-quant stakeholders.</p>
+        <p><strong>Role:</strong> GenAI Architect · Strategic Advisor</p>
+        <p><strong>Stack:</strong> Python, OpenAI, TypeScript</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/bloomberg-genai-copilot', '_blank')">View Code</button>`
+    },
+    {
+        id: 'market-data-pipeline',
+        title: 'Market Data Pipeline',
+        icon: ICONS.pipe,
+        url: 'https://github.com/tnmurthy/market-data-pipeline',
+        tooltip: 'Bloomberg to Data Warehouse Pipeline',
+        content: `<h3>Market Data Pipeline</h3>
+        <p>Production-grade data ingestion pipeline from Bloomberg Terminal to a cloud data warehouse (Snowflake / BigQuery), with automated data quality checks, lineage tracking, and scheduled analytics refreshes.</p>
+        <p><strong>Role:</strong> Data Governance · GenAI Architect</p>
+        <p><strong>Stack:</strong> Python, dbt, Snowflake, Airflow</p>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy/market-data-pipeline', '_blank')">View Code</button>`
     }
 ];
 
@@ -225,7 +623,21 @@ function openWindow(id) {
         id: 'about',
         title: 'About Me',
         icon: ICONS.computer,
-        content: `<h3>Hello, I'm Sreepadma!</h3><p>Welcome to my Windows 95 portfolio.</p><p>Double-click icons to explore my projects.</p><p>This site demonstrates my interest in unique web experiences.</p>`
+        content: `<h3>Narayanamurthy T (tnmurthy)</h3>
+        <p><strong>Product Owner · Strategic Advisor · GenAI &amp; Agentic Architect</strong></p>
+        <hr>
+        <p>I build AI-first products and advise organisations on GenAI strategy — bridging the gap between cutting-edge LLM technology and real business value.</p>
+        <p>From designing multi-agent orchestration systems to owning product roadmaps and guiding enterprise GenAI adoption, I operate across the full spectrum: architect, builder, and strategic advisor.</p>
+        <hr>
+        <p><strong>Key Expertise:</strong></p>
+        <ul>
+          <li>🧠 GenAI Architecture — RAG, fine-tuning, prompt engineering, LLM evaluation</li>
+          <li>🤖 Agentic Systems — multi-agent orchestration, LangGraph, CrewAI, MCP</li>
+          <li>📋 Product Ownership — roadmaps, backlog strategy, AI-powered PM tooling</li>
+          <li>🎯 Strategic Advisory — enterprise AI adoption, build-vs-buy, governance</li>
+        </ul>
+        <button class="btn-win95" onclick="window.open('https://www.linkedin.com/in/narayanamurthy-t/', '_blank')">LinkedIn Profile</button>
+        <button class="btn-win95" onclick="window.open('https://github.com/tnmurthy', '_blank')">GitHub</button>`
     };
 
     const template = document.getElementById('window-template');
@@ -428,7 +840,17 @@ class Clippy {
             "API Dashboard helps manage your tokens.",
             "Try right-clicking (coming soon!)",
             "You can drag windows around. Go ahead, try it!",
-            "The Start menu has some useful links too."
+            "The Start menu has some useful links too.",
+            "Check out the LCR Calculator — Basel III compliance in Python!",
+            "The Bloomberg Data Agent uses LLM tool-calling to query market data.",
+            "Data Quality Agent continuously monitors your datasets for drift and anomalies.",
+            "GenAI Analytics Assistant turns plain English into SQL queries.",
+            "The AI Data Catalog auto-generates metadata and tracks data lineage.",
+            "Liquidity Risk Agent watches intraday positions and alerts on LCR breaches.",
+            "Market Data Pipeline moves Bloomberg data into Snowflake with full lineage.",
+            "Bloomberg GenAI Copilot explains complex instruments in plain English.",
+            "Executive Insights AI writes board-level summaries from raw sprint metrics.",
+            "Real-Time Market Analytics streams tick data and OHLCV charts live."
         ];
     }
 
