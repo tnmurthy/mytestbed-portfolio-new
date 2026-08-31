@@ -1,0 +1,261 @@
+/* Windows 95 Theme CSS */
+:root {
+    --win95-gray: #c0c0c0;
+    --win95-dark: #808080;
+    --win95-darker: #404040;
+    --win95-light: #ffffff;
+    --win95-blue: #000080;
+    --win95-teal: #008080;
+    --win95-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Modern fallback */
+}
+
+@font-face {
+    font-family: 'W95FA';
+    src: url('https://fonts.cdnfonts.com/s/45697/W95FA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Custom Themes */
+body.theme-bliss {
+    --win95-teal: #245dd7; /* Windows XP Bliss vibe */
+    --win95-blue: #0053e2;
+    --win95-gray: #ece9d8;
+    --win95-dark: #7ba5e1;
+    --win95-darker: #405060;
+}
+
+body.theme-hotdog {
+    --win95-teal: #000000;
+    --win95-blue: #ff0000;
+    --win95-gray: #ffff00;
+    --win95-dark: #ff0000;
+    --win95-darker: #aa0000;
+    --win95-light: #ffffff;
+}
+
+body.theme-dark {
+    --win95-teal: #1a1a1a;
+    --win95-blue: #00d2ff;
+    --win95-gray: #2d2d2d;
+    --win95-dark: #555555;
+    --win95-darker: #121212;
+    --win95-light: #444444;
+    --win95-btn-text: #ffffff;
+}
+
+body.theme-lilac {
+    --win95-teal: #5a4b76;
+    --win95-blue: #b692c2;
+    --win95-gray: #dcb0e8;
+    --win95-dark: #9f73ab;
+    --win95-darker: #4f3b58;
+}
+
+body {
+    background-color: var(--win95-teal);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Desktop shouldn't scroll */
+    font-family: 'W95FA', 'Segoe UI', sans-serif;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    user-select: none;
+}
+
+/* Desktop Icons */
+#desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: calc(100vh - 40px);
+    /* Subtract taskbar */
+    padding: 10px;
+    align-content: flex-start;
+}
+
+.desktop-icon {
+    width: 70px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    /* For visibility on teal */
+}
+
+.desktop-icon img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+    image-rendering: pixelated;
+}
+
+.desktop-icon span {
+    background-color: transparent;
+    padding: 2px;
+    border: 1px dotted transparent;
+}
+
+.desktop-icon:active span,
+.desktop-icon.selected span {
+    background-color: var(--win95-blue);
+    border: 1px dotted var(--win95-light);
+}
+
+/* Windows */
+.window {
+    position: absolute;
+    background-color: var(--win95-gray);
+    color: var(--win95-btn-text, black);
+    border-top: 2px solid var(--win95-light);
+    border-left: 2px solid var(--win95-light);
+    border-right: 2px solid var(--win95-darker);
+    border-bottom: 2px solid var(--win95-darker);
+    box-shadow: 1px 1px 0px 0px black;
+    min-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'W95FA', sans-serif;
+}
+
+.title-bar {
+    background: var(--win95-dark);
+    /* Default inactive */
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #dfdfdf;
+    font-weight: bold;
+    cursor: default;
+}
+
+.window.active .title-bar {
+    background: var(--win95-blue);
+    color: var(--win95-btn-text, white);
+}
+body:not(.theme-dark):not(.theme-lilac) .window.active .title-bar {
+    color: white;
+}
+
+.title-bar-text {
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.title-bar-controls button {
+    width: 16px;
+    height: 14px;
+    min-width: unset;
+    padding: 0;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    background: var(--win95-gray);
+    border-top: 1px solid var(--win95-light);
+    border-left: 1px solid var(--win95-light);
+    border-right: 1px solid var(--win95-darker);
+    border-bottom: 1px solid var(--win95-darker);
+    box-shadow: none;
+}
+
+.title-bar-controls button:active {
+    border-top: 1px solid var(--win95-darker);
+    border-left: 1px solid var(--win95-darker);
+    border-right: 1px solid var(--win95-light);
+    border-bottom: 1px solid var(--win95-light);
+}
+
+.window-body {
+    padding: 10px;
+    flex-grow: 1;
+    overflow: auto;
+    font-size: 14px;
+    background: white;
+    margin: 2px;
+    border: 2px solid;
+    border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+}
+
+/* Maximized State */
+.window.maximized {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: calc(100vh - 38px) !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+/* Taskbar */
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    background-color: var(--win95-gray);
+    color: var(--win95-btn-text, black);
+    border-top: 2px solid var(--win95-light);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    z-index: 1000;
+}
+
+#start-button {
+    height: 32px;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+/* W95 Button Style */
+.btn-win95 {
+    background: var(--win95-gray);
+    color: var(--win95-btn-text, black);
+    border-top: 2px solid var(--win95-light);
+    border-left: 2px solid var(--win95-light);
+    border-right: 2px solid var(--win95-darker);
+    border-bottom: 2px solid var(--win95-darker);
+    box-shadow: 1px 1px 0 black;
+    cursor: pointer;
+    font-family: 'W95FA', sans-serif;
+}
+
+.btn-win95:active,
+.btn-win95.active {
+    border-top: 2px solid var(--win95-darker);
+    border-left: 2px solid var(--win95-darker);
+    border-right: 2px solid var(--win95-light);
+    border-bottom: 2px solid var(--win95-light);
+    box-shadow: none;
+    transform: translate(1px, 1px);
+}
+
+.divider {
+    width: 2px;
+    height: 28px;
+    background-color: var(--win95-dark);
+    margin: 0 5px;
+    border-right: 1px solid var(--win95-light);\n}\n\n#taskbar-items {\n    flex-grow: 1;\n    display: flex;\n    padding: 0 5px;\n    gap: 3px;\n    overflow-x: auto;\n}\n\n.taskbar-item {\n    height: 28px;\n    min-width: 140px;\n    max-width: 200px;\n    padding: 2px 5px;\n    display: flex;\n    align-items: center;\n    gap: 5px;\n    font-size: 12px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    text-align: left;\n}\n\n#clock {\n    background: var(--win95-gray);\n    color: var(--win95-btn-text, black);\n    border-top: 2px solid var(--win95-darker);\n    border-left: 2px solid var(--win95-darker);\n    border-right: 2px solid var(--win95-light);\n    border-bottom: 2px solid var(--win95-light);\n    padding: 2px 10px;\n    margin-right: 4px;\n    font-size: 12px;\n    display: flex;\n    align-items: center;\n    height: 24px;\n}\n\n#start-menu {\n    position: absolute;\n    bottom: 40px;\n    left: 2px;\n    background: var(--win95-gray);\n    color: var(--win95-btn-text, black);\n    border: 2px solid var(--win95-light);\n    border-right-color: var(--win95-darker);\n    border-bottom-color: var(--win95-darker);\n    box-shadow: 2px 2px 0 black;\n    display: none;\n    flex-direction: row;\n    z-index: 2000;\n}\n\n.sidebar {\n    background: var(--win95-blue);\n    width: 25px;\n    display: flex;\n    align-items: flex-end;\n    justify-content: center;\n}\n\n.sidebar-text {\n    writing-mode: vertical-rl;\n    transform: rotate(180deg);\n    color: white;\n    font-weight: bold;\n    font-size: 20px;\n    padding-bottom: 10px;\n}\n\n.menu-items {\n    display: flex;\n    flex-direction: column;\n    min-width: 150px;\n}\n\n.menu-item {\n    padding: 10px 15px;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    position: relative;\n    justify-content: flex-start;\n}\n\n.menu-item span {\n    margin-left: auto;\n    font-size: 10px;\n}\n\n.submenu {\n    position: absolute;\n    left: 100%;\n    top: -2px;\n    background: var(--win95-gray);\n    color: var(--win95-btn-text, black);\n    border: 2px solid var(--win95-light);\n    border-right-color: var(--win95-darker);\n    border-bottom-color: var(--win95-darker);\n    box-shadow: 2px 2px 0 black;\n    display: none;\n    flex-direction: column;\n    min-width: 150px;\n}\n\n.menu-item:hover {\n    background-color: var(--win95-blue);\n    color: white;\n}\n\n/* Helper Classes */\n.hidden {\n    display: none !important;\n}\n\n/* Scrollbar */\n::-webkit-scrollbar {\n    width: 16px;\n    height: 16px;\n    background: var(--win95-gray);\n}\n\n::-webkit-scrollbar-thumb {\n    background: var(--win95-gray);\n    border-top: 1px solid var(--win95-light);\n    border-left: 1px solid var(--win95-light);\n    border-right: 1px solid var(--win95-darker);\n    border-bottom: 1px solid var(--win95-darker);\n}\n\n::-webkit-scrollbar-button {\n    background: var(--win95-gray);\n    border-top: 1px solid var(--win95-light);\n    border-left: 1px solid var(--win95-light);\n    border-right: 1px solid var(--win95-darker);\n    border-bottom: 1px solid var(--win95-darker);\n    display: block;\n    height: 16px;\n    width: 16px;\n}\n\n/* Clippy */\n#clippy {\n    position: fixed;\n    bottom: 50px;\n    right: 20px;\n    width: 100px;\n    height: 100px;\n    z-index: 2000;\n    cursor: pointer;\n    background-repeat: no-repeat;\n    background-size: contain;\n    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));\n}\n\n.clippy-bubble {\n    position: absolute;\n    bottom: 110px;\n    right: 20px;\n    background: #ffffe1;\n    border: 1px solid black;\n    border-radius: 5px;\n    padding: 10px;\n    width: 200px;\n    font-size: 12px;\n    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);\n    display: none;\n    font-family: 'Segoe UI', sans-serif;\n}\n\n.clippy-bubble:after {\n    content: '';\n    position: absolute;\n    bottom: -10px;\n    right: 30px;\n    border-width: 10px 10px 0;\n    border-style: solid;\n    border-color: #ffffe1 transparent;\n    display: block;\n    width: 0;\n}\n\n/* Tooltips */\n.tooltip {\n    position: absolute;\n    background-color: #ffffe1;\n    color: black;\n    border: 1px solid black;\n    padding: 2px 5px;\n    font-size: 11px;\n    font-family: 'Segoe UI', Tahoma, sans-serif;\n    z-index: 3000;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);\n    bottom: 110%;\n    left: 50%;\n    transform: translateX(-50%);\n}\n\n.desktop-icon:hover .tooltip {\n    display: block;\n}\n\n/* Boot Screen */\n#boot-screen {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    background-color: #000;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    z-index: 9999;\n    color: white;\n    font-family: 'Segoe UI', Tahoma, sans-serif;\n}\n\n.boot-logo {\n    text-align: center;\n    margin-bottom: 50px;\n}\n\n.boot-logo img {\n    width: 80px;\n    height: 80px;\n    image-rendering: pixelated;\n    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));\n}\n\n.boot-text {\n    font-size: 24px;\n    margin-top: 20px;\n    font-weight: bold;\n}\n\n.boot-loader {\n    width: 300px;\n    height: 20px;\n    border: 2px solid #808080;\n    padding: 2px;\n}\n\n.loader-bar {\n    width: 0%;\n    height: 100%;\n    background: linear-gradient(90deg, #000080, #1084d0);\n    animation: load 2.5s linear forwards;\n}\n\n@keyframes load {\n    0% {\n        width: 0%;\n    }\n\n    20% {\n        width: 30%;\n    }\n\n    50% {\n        width: 45%;\n    }\n\n    80% {\n        width: 85%;\n    }\n\n    100% {\n        width: 100%;\n    }\n}\n\n#boot-screen.fade-out {\n    opacity: 0;\n    visibility: hidden;\n    transition: opacity 0.5s ease-out, visibility 0.5s;\n}\n\n/* Transitions for Desktop Reveal */\n#desktop,\n#taskbar {\n    opacity: 0;\n    transition: opacity 1s ease-in;\n}\n\nbody.booted #desktop,\nbody.booted #taskbar {\n    opacity: 1;\n}\n\n/* Context Menu */\n#context-menu {\n    position: fixed;\n    background: var(--win95-gray);\n    color: var(--win95-btn-text, black);\n    border: 2px solid var(--win95-light);\n    border-right-color: var(--win95-darker);\n    border-bottom-color: var(--win95-darker);\n    box-shadow: 2px 2px 0 black;\n    z-index: 5000;\n    display: none;\n    min-width: 150px;\n}\n\n/* Folder Content Grid Styling */\n.folder-grid {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    align-content: flex-start;\n    gap: 15px;\n    padding: 15px;\n    background: white;\n    height: 100%;\n    min-height: 180px;\n    overflow-y: auto;\n}\n\n.folder-grid .desktop-icon {\n    color: black !important;\n    text-shadow: none !important;\n}\n\n.folder-grid .desktop-icon span {\n    border: 1px dotted transparent;\n}\n\n.folder-grid .desktop-icon:active span,\n.folder-grid .desktop-icon.selected span {\n    background-color: var(--win95-blue);\n    color: white;\n    border: 1px dotted var(--win95-light);\n}\n\n.context-menu-item {\n    padding: 5px 20px;\n    cursor: default;\n    font-size: 12px;\n}\n\n.context-menu-item:hover {\n    background: var(--win95-blue);\n    color: white;\n}\n\n.context-menu-divider {\n    height: 1px;\n    background: var(--win95-dark);\n    border-bottom: 1px solid var(--win95-light);\n    margin: 2px 0;\n}\n\n/* Marquee Selection */\n#selection-marquee {\n    position: absolute;\n    border: 1px dotted white;\n    background: rgba(0, 0, 128, 0.2);\n    pointer-events: none;\n    z-index: 4000;\n    display: none;\n}\n\n/* Mobile Responsiveness */\n@media (max-width: 600px) {\n    #desktop {\n        flex-direction: row;\n        justify-content: center;\n        align-content: flex-start;\n    }\n\n    .desktop-icon {\n        margin: 5px;\n        width: 60px;\n    }\n\n    .window {\n        width: 90vw;\n        left: 5vw;\n        min-width: unset;\n    }\n\n    .taskbar-item {\n        min-width: 40px;\n        width: 40px;\n        font-size: 0;\n        /* Hide text, keep icon */\n    }\n}
