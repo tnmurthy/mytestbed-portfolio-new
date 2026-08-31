@@ -1,12 +1,3 @@
 {
-    "version": 2,
-    "public": true,
-    "name": "win95-portfolio",
-    "cleanUrls": true,
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/homepage/$1"
-        }
-    ]
+  "cleanUrls": true
 }
